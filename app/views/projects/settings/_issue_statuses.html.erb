@@ -1,0 +1,18 @@
+<!-- plugins/project_issue_statuses/app/views/project_issue_statuses/settings.html.erb -->
+<h3><%= l(:label_project_issue_statuses) %></h3>
+
+<%= form_with url: project_project_issue_statuses_path(@project), method: :put, local: true do %>
+  <div class="box">
+  <% if @issue_statuses.present? %>
+    <% @issue_statuses.each do |status| %>
+      <label>
+        <%= check_box_tag 'issue_status_ids[]', status.id, @selected_status_ids.include?(status.id) %>
+        <%= status.name %>
+      </label><br/>
+    <% end %>
+  <% else %>
+    <p><em>No issue statuses available.</em></p>
+  <% end %>
+  </div>
+  <p><%= submit_tag l(:button_save) %></p>
+<% end %>
