@@ -1,4 +1,4 @@
-module ProjectIssueStatuses
+module RedmineProjectIssueStatus
   module Patches
     module IssuesControllerPatch
       def self.included(base)
@@ -16,6 +16,6 @@ module ProjectIssueStatuses
   end
 end
 
-unless IssuesController.included_modules.include?(ProjectIssueStatuses::Patches::IssuesControllerPatch)
-  IssuesController.send(:include, ProjectIssueStatuses::Patches::IssuesControllerPatch)
+unless IssuesController.included_modules.include?(RedmineProjectIssueStatus::Patches::IssuesControllerPatch)
+  IssuesController.send(:include, RedmineProjectIssueStatus::Patches::IssuesControllerPatch)
 end
