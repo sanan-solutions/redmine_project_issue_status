@@ -13,5 +13,5 @@ end
 require_relative 'lib/redmine_project_issue_status/patches/projects_helper_patch'
 require_relative 'lib/redmine_project_issue_status/patches/project_patch'
 require_relative 'lib/redmine_project_issue_status/patches/issue_status_patch'
-require_relative 'lib/redmine_project_issue_status/patches/project_controller_patch'
+require_relative 'lib/redmine_project_issue_status/patches/projects_controller_patch'
 require_relative 'lib/redmine_project_issue_status/patches/issues_controller_patch'
